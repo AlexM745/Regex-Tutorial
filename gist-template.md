@@ -33,6 +33,18 @@ For this tutorial we will look at the "Matching Email" regex, you will see the p
 Lets look at the compents of this Regular Expression.
 
 ### Anchors
+The caret(^) the dollar ($) are characters with special meaning because they are called "anchors" in regular expressions. They do not match a character but they tell the regex engine to check the condition.
+
+* `^` matches the start of the string with the characters that follow it.
+
+    - An exact match of the string can work such as, `^A`, where the strings "A" and "ABC" match but not "a" or "abc". This happens becuase regular expressions is **case-senstive**.
+
+ * `$` matches the end of the string with the characters that before it.
+
+Both of them can have a range of possible matches which are displayed with brackets which will be explain in the a following [section](#bracket-expressions).
+
+In the "Matching Email" regex, the string has to start and finish with something that matches
+the following pattern:`^([a-z0-9_\.-]+)`and the`([a-z\.]{2,6})$`.  
 
 ### Quantifiers
 
