@@ -104,7 +104,13 @@ The curly brackets in our regex are setting the limit of matching the mininum nu
 
 ### Character Classes
 
+
 ### Character Escapes
+
+In order to use a special characters literaly you will need to use a backslash `\` before any special character in order to tell the regex to look for the character instead of a quantifier.
+
+The "Matching email" regex is using the backslash in all three grouping constructors to get the period `.` character for the regex to match it as a character such as in this grouping:
+`[a-z0-9_\.-]`
 
 
 ## Author
