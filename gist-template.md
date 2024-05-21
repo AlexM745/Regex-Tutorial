@@ -104,6 +104,11 @@ The curly brackets in our regex are setting the limit of matching the mininum nu
 
 ### Character Classes
 
+Character classes distiguish kinds of characters such as numbers and letters.
+
+Our regex uses the character class `\d` which matches any single digit and is the same to [0-9].
+
+In our code we see `([\da-z\.-]+)` which will look for any digits, letters from [a-z] and special characters.
 
 ### Character Escapes
 
