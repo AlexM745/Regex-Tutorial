@@ -67,8 +67,25 @@ In our regex we have 3 grouping constructs:
 * The third subexpression is looking to capture the match of the domain which is the end of our regex.
 
 ### Bracket Expressions
+After learning about grouping constructors we see that we have square brackets inside our subexpressions. 
+
+Anything that is inside a set fo square brackets `[]` is a range of characters that the regex is looking to match. It is common to see a hyphen `-` used inside the brackets between numbers and letters characters only to look for a range of possible matches. (The are case sensitive.)
+
+Now we can look at the three sections of our regex  with square brackets and see what we are looking to match.
+ * `[a-z0-9_\.-]`
+    - [a-z] which is looking for lowercase letter characters, case sensitive.
+    - [0-9] which is looking for a number between 0 and 9.
+    - [_\.-] which is looking for special characters`_ . -`.
+ * `[\da-z\.-]`
+    - [\d] which is looking for a single digit from 0-9
+    - [a-z] which is looking for lowercase letter characters, case sensitive.
+    - [\.-] which is looking for special characters`. -`.
+ * `[a-z\.]`
+    - [a-z] which is looking for lowercase letter characters, case sensitive.
+    - [\.] which is looking for special character `.`.
 
 ### Quantifiers
+
 Quantifiers specify the number of characters or section of string to match. They might include minimum and maximum numbers of characters for your regular expression. 
 
 Our regex has two quantifiers the plus sign `+` and curly brackets`{}`.
