@@ -37,20 +37,43 @@ The caret(^) the dollar ($) are characters with special meaning because they are
 
 * `^` matches the start of the string with the characters that follow it.
 
-    - An exact match of the string can work such as, `^A`, where the strings "A" and "ABC" match but not "a" or "abc". This happens becuase regular expressions is **case-senstive**.
+    - An exact match of the string will work but you have to be careful because regex are **case-senstive**.
 
  * `$` matches the end of the string with the characters that before it.
 
 Both of them can have a range of possible matches which are displayed with brackets which will be explain in the a following [section](#bracket-expressions).
 
 In the "Matching Email" regex, the string has to start and finish with something that matches
-the following pattern:`^([a-z0-9_\.-]+)`and the`([a-z\.]{2,6})$`.  
-
-### Quantifiers
+the following patterns:`^([a-z0-9_\.-]+)`and the`([a-z\.]{2,6})$`.  
 
 ### Grouping Constructs
+Now that we know how to set the start and the end of our regex. We can now look at the next part of it, which are the parentheses`()` and they are a grouping construct.
+
+Grouping contructs have two categories capturing and non-capturing. Our regex is a capturing group because it does not include the following characters`?:`at the start in the parentheses.
+
+Parentheses are the primary way of grouping sections in a regex and anything within the `()` are called subexpressions. 
+In our regex we have 3 grouping constructs:
+
+"/^`([a-z0-9_\.-]+)`@ `([\da-z\.-]+)`\.`([a-z\.]{2,6})`$/". 
+
+* The first subexpression is looking for the match of the username of the email address which has the @ symbol after it for the email server.
+
+* The second subexpression is looking for the match of the email server which has the "." after it for the domian.
+
+* The third subexpression is looking for the match of the domain which is the end of our regex.
 
 ### Bracket Expressions
+
+### Quantifiers
+Quantifiers specify the number of characters or section of string to match. They might include minimum and maximum numbers of characters for your regular expression. 
+
+
+
+In the "Matching Email" regex we see the `+` operator twice in the first two groupings:
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\`.
+
+InThe `+` connects the username + email server + domain (Ex:`.com`).
+
 
 ### Character Classes
 
