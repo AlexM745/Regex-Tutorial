@@ -1,6 +1,6 @@
 # Regular Expression Tutorial
 
-Understanding Regular Expressions are an integral part of programming and becoming an effective programmer. As a web development students I have developed the following tutorial to help myself and others understand this important Computer Science concept.
+Understanding Regular Expressions are an integral part of programming and becoming an effective programmer. As a web development student I have developed the following tutorial to help myself and others understand this important Computer Science concept.
 
 ## Summary
 
