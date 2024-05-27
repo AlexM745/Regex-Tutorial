@@ -12,6 +12,8 @@ This is a Regular Expression tutorial explaining the " Matching Email ":
 
 This is to help me and others understand the way regex defines search patterns.
 
+Click [here](https://gist.github.com/AlexM745/5a0305d65d0916123f8d68055d9a1212) to see the github gist.
+
 ## Table of Contents
 
   - [User Story](#user-story)
